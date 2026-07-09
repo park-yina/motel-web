@@ -2,7 +2,7 @@
     const CONFIG = {
 
     API_BASE:
-    "https://leads-gary-about-truth.trycloudflare.com",
+    "https://apt-ccd-reputation-productions.trycloudflare.com",
 
     REFRESH_INTERVAL:3000,
 
