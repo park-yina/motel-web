@@ -1,0 +1,486 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+        Pretendard,
+        "Noto Sans KR",
+        sans-serif;
+
+    background:#f4f6fa;
+
+    color:#222;
+
+}
+
+.container{
+
+    max-width:520px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+}
+
+/* ---------------- Header ---------------- */
+
+header{
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6);
+
+    color:white;
+
+    padding:24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-radius:0 0 24px 24px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(0,0,0,.12);
+
+}
+
+header h1{
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+#updateTime{
+
+    font-size:14px;
+
+    opacity:.9;
+
+}
+
+#refreshButton{
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#refreshButton:hover{
+
+    background:rgba(255,255,255,.28);
+
+}
+
+#refreshButton:active{
+
+    transform:scale(.95);
+
+}
+
+/* ---------------- Summary ---------------- */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:10px;
+
+    padding:18px;
+
+}
+
+.summary-card{
+
+    color:white;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    padding:14px 4px;
+
+}
+
+.summary-card .count{
+
+    display:block;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:6px;
+
+}
+
+.summary-card span:last-child{
+
+    font-size:12px;
+
+}
+
+/* 두 번째 줄 */
+
+.summary-card:nth-child(n+5){
+
+    margin-top:4px;
+
+}
+
+/* ---------------- Summary Color ---------------- */
+
+.empty-summary{
+
+    background:#9ca3af;
+
+}
+
+.stay-summary{
+
+    background:#f97316;
+
+}
+
+.rental-summary{
+
+    background:#0ea5e9;
+
+}
+
+.longstay-summary{
+
+    background:#9333ea;
+
+}
+
+.out-summary{
+
+    background:#22c55e;
+
+}
+
+.cleaning-summary{
+
+    background:#1d4ed8;
+
+}
+
+.wait-summary{
+
+    background:#facc15;
+
+    color:#333;
+
+}
+
+/* ---------------- Tabs ---------------- */
+
+.tabs{
+
+    display:flex;
+
+    gap:10px;
+
+    padding:0 18px 18px;
+
+}
+
+.tabs button{
+
+    flex:1;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.2s;
+
+    box-shadow:
+        0 3px 8px
+        rgba(0,0,0,.05);
+
+}
+
+.tabs button.active{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ---------------- Floor ---------------- */
+
+#roomsContainer{
+
+    padding:0 18px 30px;
+
+}
+
+#roomsContainer h2{
+
+    margin:24px 0 12px;
+
+    color:#444;
+
+    font-size:22px;
+
+}
+
+.floor-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+/* ---------------- Room Card ---------------- */
+
+.room-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0,0,0,.08);
+
+    transition:.15s;
+
+}
+
+.room-card:hover{
+
+    transform:translateY(-1px);
+
+}
+
+.room-card:active{
+
+    transform:scale(.97);
+
+}
+
+.room-card h3{
+
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:16px;
+
+}
+
+.status{
+
+    display:block;
+
+    text-align:center;
+
+    padding:8px;
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ---------------- Left Border ---------------- */
+
+.room-card.empty{
+
+    border-left:8px solid #9ca3af;
+
+}
+
+.room-card.stay{
+
+    border-left:8px solid #f97316;
+
+}
+
+.room-card.rental{
+
+    border-left:8px solid #0ea5e9;
+
+}
+
+.room-card.longstay{
+
+    border-left:8px solid #9333ea;
+
+}
+
+.room-card.out{
+
+    border-left:8px solid #22c55e;
+
+}
+
+.room-card.cleaning{
+
+    border-left:8px solid #2563eb;
+
+}
+
+.room-card.waitcleaning{
+
+    border-left:8px solid #facc15;
+
+}
+
+/* ---------------- Badge ---------------- */
+
+.status.empty{
+
+    background:#f3f4f6;
+
+    color:#6b7280;
+
+}
+
+.status.stay{
+
+    background:#fff7ed;
+
+    color:#ea580c;
+
+}
+
+.status.rental{
+
+    background:#eff6ff;
+
+    color:#0369a1;
+
+}
+
+.status.longstay{
+
+    background:#faf5ff;
+
+    color:#7e22ce;
+
+}
+
+.status.out{
+
+    background:#f0fdf4;
+
+    color:#15803d;
+
+}
+
+.status.cleaning{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+.status.waitcleaning{
+
+    background:#fefce8;
+
+    color:#ca8a04;
+
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media(max-width:520px){
+
+    .summary{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+@media(max-width:420px){
+
+    header{
+
+        padding:20px;
+
+    }
+
+    header h1{
+
+        font-size:24px;
+
+    }
+
+    .summary{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .summary-card .count{
+
+        font-size:20px;
+
+    }
+
+}
+
+@media(max-width:360px){
+
+    .floor-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

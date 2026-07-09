@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>객실 현황</title>
+
+    <link
+        rel="stylesheet"
+        href="css/rooms.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div>
+
+            <h1>🏨 객실 현황</h1>
+
+            <p id="updateTime">
+
+                마지막 갱신 -
+
+            </p>
+
+        </div>
+
+        <button
+            id="refreshButton"
+            title="새로고침">
+
+            🔄
+
+        </button>
+
+    </header>
+
+    <!-- 상태 요약 -->
+
+    <section class="summary">
+
+        <div class="summary-card empty-summary">
+
+            <span
+                id="emptyCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                ⚪ 빈방
+
+            </span>
+
+        </div>
+
+        <div class="summary-card stay-summary">
+
+            <span
+                id="stayCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🟠 숙박
+
+            </span>
+
+        </div>
+
+        <div class="summary-card rental-summary">
+
+            <span
+                id="rentalCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🔵 대실
+
+            </span>
+
+        </div>
+
+        <div class="summary-card longstay-summary">
+
+            <span
+                id="longStayCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🟣 장기
+
+            </span>
+
+        </div>
+
+        <div class="summary-card out-summary">
+
+            <span
+                id="outCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🟢 외출
+
+            </span>
+
+        </div>
+
+        <div class="summary-card cleaning-summary">
+
+            <span
+                id="cleaningCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🔷 청소중
+
+            </span>
+
+        </div>
+
+        <div class="summary-card wait-summary">
+
+            <span
+                id="waitCount"
+                class="count">
+
+                0
+
+            </span>
+
+            <span>
+
+                🟡 청소대기
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- 탭 -->
+
+    <section class="tabs">
+
+        <button
+            class="tab-button active"
+            data-filter="all">
+
+            전체
+
+        </button>
+
+        <button
+            class="tab-button"
+            data-filter="WaitCleaning">
+
+            청소대기
+
+        </button>
+
+        <button
+            class="tab-button"
+            data-filter="recent">
+
+            최근 변경
+
+        </button>
+
+    </section>
+
+    <!-- 객실 -->
+
+    <section
+        id="roomsContainer">
+
+    </section>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/rooms.js"></script>
+
+</body>
+
+</html>
